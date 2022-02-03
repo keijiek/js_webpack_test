@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log(Document);const e=document.getElementsByTagName("body");console.log(e);const o=document.createElement("h1");o.insertAdjacentHTML("afterbegin","見出し"),console.log(o),e[0].appendChild(o)})();
