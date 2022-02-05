@@ -12,11 +12,14 @@ module.exports = (env, argv) => {
     mode: 'development',
     // mode: 'production',
 
-    entry: './src/js/app.js',
+    entry: {
+      //'js/bandle': './src/js/app.js'
+      'js/bandle': path.join(__dirname, 'src', 'js', 'app.ts')
+    },
 
     output: {
       path: path.resolve(__dirname, 'public'),
-      filename: 'js/bundle.js'
+      filename: '[name].js'
     }
   }
 }

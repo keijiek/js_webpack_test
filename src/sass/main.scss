@@ -1,0 +1,15 @@
+// @use "./reset";
+
+@mixin mainColorSet() {
+  background-color: #112;
+  color: #ccc;
+}
+
+@mixin mainMargin() {
+  margin: 1.6rem;
+}
+
+body {
+  @include mainColorSet();
+  @include mainMargin();
+}
