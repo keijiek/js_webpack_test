@@ -2,8 +2,8 @@
 import '../sass/style.scss';
 import { add, subtract } from './modules/math';
 
-const item1Price = 400;
-const item2Price = 600;
+const item1Price = 1000;
+const item2Price = 1500;
 const coupon = 2100;
 
 const totalPrice = add(item1Price, item2Price);
