@@ -1,3 +1,4 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 // エントリーポイント, ts にするかもしれないので、書き直しやすいよう外側に出しておく
@@ -13,16 +14,21 @@ module.exports = {
   },
   module: {
     rules: [
-      // rule for scss
+      // a Rule for translation from SASS to CSS
       {
         test: /\.s[ac]ss$/i,
-        //include: path.resolve(__dirname, 'src/sass'),
+        include: path.resolve(__dirname, 'src/sass'),
         use: [
-          'style-loader',
+          // 'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',
         ],
       }
     ],
   },
+  plugins: [
+    // css ファイルを出力させるプラグイン, 出力する filename は output.path を起点とした path
+    new MiniCssExtractPlugin({filename: './css/style.css',}),
+  ],
 }
