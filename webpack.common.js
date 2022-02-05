@@ -11,4 +11,18 @@ module.exports = {
     path: path.resolve(__dirname, 'public'),
     filename: '[name].js',
   },
+  module: {
+    rules: [
+      // rule for scss
+      {
+        test: /\.s[ac]ss$/i,
+        //include: path.resolve(__dirname, 'src/sass'),
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      }
+    ],
+  },
 }

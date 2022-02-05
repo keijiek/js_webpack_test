@@ -1,4 +1,5 @@
 // import $ from 'jquery';
+import '../sass/style.scss';
 import { add, subtract } from './modules/math';
 
 const item1Price = 400;
