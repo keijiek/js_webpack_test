@@ -9,6 +9,7 @@
       "ESNext",
       "DOM"
     ],
+    "typeRoots": ["./types", "node_modules/@types"],
     "esModuleInterop": true,// 
     "moduleResolution": "Node",// pixi.js を ts から import するために必要だった。
     "forceConsistentCasingInFileNames": true,//ファイル名の文字の大小を区別=true
