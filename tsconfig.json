@@ -1,29 +1,29 @@
 {
   "compilerOptions": {
-    "rootDir": "./src/ts/",
+    "rootDir": "./src/script",
     "baseUrl": "./src/",
-    "outDir": "./public/js/",
-    "target": "ESNext",// 出力jsのバージョン, IE を想定した es5 が無難らしい
+    "outDir": "./public/script/",
+    "target": "ES5",// 出力jsのバージョン, IE を想定した es5 が無難らしい
     "module": "ESNext",// lib に同じものを入れる必要がある。
     "lib": [
-      "DOM",
-      "ESNext"
+      "ESNext",
+      "DOM"
     ],
     "esModuleInterop": true,// 
-    "forceConsistentCasingInFileNames": true,//ファイル名の文字の大小を区別 true
+    "moduleResolution": "Node",// pixi.js を ts から import するために必要だった。
+    "forceConsistentCasingInFileNames": true,//ファイル名の文字の大小を区別=true
     "sourceMap": true,
-    "skipLibCheck": false,// d.ts を参照する厳密な型チェックを飛ばす(=true)
-    "declaration": true,// 型定義ファイル(*.d.ts)を出力する(true)
+    "skipLibCheck": false,// d.ts を参照する厳密な型チェックを飛ばす=true
+    "declaration": true,// 型定義ファイル(*.d.ts)を出力する=true
     "declarationDir": "./types",// 上記の出力場所
-    "allowJs": false,// js ファイルをインポートを許可しない(false)
-    "allowSyntheticDefaultImports": false,// import の制限を弱めない(false)
+    "allowJs": false,// js ファイルをインポートを許可しない=false
+    "allowSyntheticDefaultImports": false,// import の制限を弱めない=false
     "noImplicitReturns":true,// 関数に返値を返さない処理ルートがあるとエラーにする(true)
     "noFallthroughCasesInSwitch": false,// swich構文で、あるcaseの処理がbreakされずに次のcaseに移るとエラー(true)
-    "moduleResolution": "Node",// pixi.js を ts から import するために必要だった。
     "strict": true // true 必須。いくつかの設定も自動的に true にする。
   },
   "include": [
-    "./src/ts/**/*",
+    "src/script/**/*",
   ],
   "exclude": [
     ".git",

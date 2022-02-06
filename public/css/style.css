@@ -1,1 +1,1 @@
-body{background-color:#111;color:#ccc;margin:1.2rem}body a{text-decoration:none;color:#66c}body a:hover{color:#99f}body a:active{color:#99f}
+body{background-color:#111;color:#ccc;margin:1.2rem}a.button{display:inline-block;border-radius:50%;font-size:27pt;text-align:center;cursor:pointer;padding:12px 12px;background:#006;color:#fff;line-height:1em;transition:.3s;box-shadow:13px 13px 3px #666;border:2px solid #006}

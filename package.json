@@ -1,8 +1,9 @@
 {
-  "main": "index.js",
+  "private": "false",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --fix ./src/js/",
+    "lint": "eslint --fix ./src/script/",
     "prod": "webpack --config ./webpack.prod.js",
     "dev": "webpack --config ./webpack.dev.js && npm run serve",
     "serve": "npx webpack serve --config ./webpack.dev.js"

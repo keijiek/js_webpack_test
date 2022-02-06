@@ -1,10 +1,10 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-// a Rule for translation from SASS to CSS
+// Rule: sass-loader css-loader MiniCssExtractPlugin
 const ruleForSASS = {
   test: /\.s[ac]ss$/i,
-  include: path.resolve(__dirname, 'src/sass'),// output.path を起点としたpath
+  include: path.resolve(__dirname, 'src/sass'),// module.exports に書かれる output.path を起点としたpath
   use: [
     MiniCssExtractPlugin.loader,
     'css-loader',
@@ -12,7 +12,7 @@ const ruleForSASS = {
   ],
 }
 
-// a Rule for translation from TypeScript to JS
+// Rule: ts-loader
 const ruleForTypeScript = {
   test: /\.tsx?$/,
   use: 'ts-loader',
@@ -23,9 +23,9 @@ const ruleForTypeScript = {
 module.exports = {
   // 入力の起点
   entry: {
-    'js/bundle': path.resolve(__dirname, 'src', 'ts', 'app.ts'),
+    'script/bundle': path.resolve(__dirname, 'src', 'script', 'index.ts'),
   },
-  // 出力するバンドルjs
+  // 出力先と出力ファイル名
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: '[name].js',
