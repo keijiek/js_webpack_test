@@ -1,15 +1,29 @@
 // @use "./reset";
 
+// padding  margin の基礎サイズ
+$BASE_SIZE: 0.6rem;
+
+@function getRems($coefficient:1, $base:$BASE_SIZE) {
+  @return $coefficient*$base
+};
+
 @mixin mainColorSet() {
   background-color: #111;
   color: #ccc;
 }
 
-@mixin mainMargin() {
-  margin: 10rem;
+@mixin anchorColor() {
+  color: #66c;
+  &:hover{color: #99f;}
+  &:active{color: #99f;}
 }
 
 body {
   @include mainColorSet();
-  @include mainMargin();
+  margin: getRems(2);
+}
+
+a {
+  @include anchorColor();
+  text-decoration: none;
 }
